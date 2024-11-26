@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background: #222;
+    }
+    .card {
+      width: 90%;
+      max-width: 470px;
+      background: linear-gradient(135deg, #00feba, #5b548a);
+      color: #fff;
+      margin: 100px auto 0;
+      border-radius: 20px;
+      padding: 40px 35px;
+      text-align: center;
+    }
+    .search {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .search input {
+      border: 0;
+      outline: 0;
+      background: #ebfffc;
+      color: #555;
+      padding: 10px 25px;
+      height: 60px;
+      border-radius: 30px;
+      flex: 1;
+      margin-right: 16px;
+      font-size: 18px;
+    }
+    .search button {
+      border: 0;
+      outline: 0;
+      background: #ebfffc;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+    }
+    .search button img {
+      width: 36px;
+    }
+    .weather-icon {
+      width: 170px;
+      margin-top: 30px;
+    }
+    .weather h1 {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 80px;
+      font-weight: 500;
+    }
+    .weather h2 {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 45px;
+      font-weight: 500;
+      margin-top: -10px;
+    }
+    .details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      margin-top: 50px;
+    }
+    .col {
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+    .col img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    .humidity,
+    .wind {
+      font-size: 25px;
+      margin-top: -6px;
+    }
+    .weather {
+      display: none;
+    }
+    .error {
+      text-align: left;
+      margin-left: 10px;
+      font-size: 14px;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input
+          id="inp1"
+          type="text"
+          placeholder="enter city name"
+          spellcheck="false"
+        />
+        <button
+          onclick="displayy(
+          
+        )"
+        >
+          <img src="./img/search.png" alt="" />
+        </button>
+      </div>
+      <div class="error">
+        <p>Invalid city name</p>
+      </div>
+      <div class="weather">
+        <img src="./img/rain.png" class="weather-icon" />
+        <h1 class="temp">22°c</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+          <div class="col">
+            <img src="./img/humidity.png" alt="" />
+            <div>
+              <p class="humidity">50%</p>
+              <p>humidity</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <img src="./img/wind.png" alt="" />
+            <div>
+              <p class="wind">50km/h</p>
+              <p>Wind speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
